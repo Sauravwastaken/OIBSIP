@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+
+@tailwind utilities;
+
+.site_padding {
+  @apply px-40 xl:px-32 lg:px-24 md:px-16 sm:px-8 xs:px-4;
+}
+
+.btn {
+  @apply bg-theme_green py-4 px-6 rounded-lg transition hover:scale-105;
+}
+
+.title {
+  @apply text-5xl font-medium leading-snug text-theme_black dark:text-theme_black_dark xl:text-4xl lg:text-center sm:text-3xl;
+}
+
+.responsive_nav {
+  @apply h-full items-baseline fixed bg-white z-20 w-full dark:bg-theme_white_dark;
+}
+
+.responsive_nav_links {
+  @apply !block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  !space-x-0  space-y-6 text-center py-12 dark:bg-theme_white_dark text-xl;
+}

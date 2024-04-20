@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Black.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Bold Italic.otf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Book Italic.otf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Book.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Heavy Italic.otf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Heavy.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Light Italic.otf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Medium Italic.otf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Regular Italic.otf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Thin Italic.otf");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro Thin.otf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro UltraLight Italic.otf");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ariana";
+  src: url("../fonts/Ariana Pro UltraLight.otf");
+  font-weight: 200;
+  font-style: normal;
+}

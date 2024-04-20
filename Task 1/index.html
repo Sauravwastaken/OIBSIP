@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" class="select-none scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniq - Modern Furniture Store</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo.webp"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/fonts/fonts.css" />
+  </head>
+  <body class="font-ariana bg-theme_white dark:bg-theme_white_dark">
+    <!-- ! Nav Bar -->
+    <nav class="flex justify-between items-center site_padding py-12">
+      <div class="self-start">
+        <p
+          class="font-semibold text-2xl cursor-pointer text-theme_black dark:text-theme_black_dark"
+        >
+          Furniq
+        </p>
+      </div>
+      <div class="flex items-center space-x-12">
+        <ul
+          id="nav_links"
+          class="flex items-center space-x-8 text-theme_gray dark:text-theme_gray_dark font-medium lg:space-x-6 md:hidden"
+        >
+          <li
+            class="cursor-pointer relative after:transition-all after:absolute after:bottom-0 after:left-0 after:h-[1.4px] after:w-0 after:bg-theme_gray hover:after:w-full md:w-fit md:mx-auto"
+          >
+            <a href="#"> Home </a>
+          </li>
+          <li
+            class="cursor-pointer relative after:transition-all after:absolute after:bottom-0 after:left-0 after:h-[1.4px] after:w-0 after:bg-theme_gray hover:after:w-full"
+          >
+            <a href="#collections"> Collections </a>
+          </li>
+          <li
+            class="cursor-pointer relative after:transition-all after:absolute after:bottom-0 after:left-0 after:h-[1.4px] after:w-0 after:bg-theme_gray hover:after:w-full"
+          >
+            <a href="#projects"> Projects </a>
+          </li>
+          <li
+            class="cursor-pointer relative after:transition-all after:absolute after:bottom-0 after:left-0 after:h-[1.4px] after:w-0 after:bg-theme_gray hover:after:w-full"
+          >
+            <a> Contact </a>
+          </li>
+        </ul>
+        <ul class="flex items-center space-x-4">
+          <!-- Cart -->
+          <li
+            class="cursor-pointer border-1.4 p-2 rounded-full border-theme_gray transition hover:scale-105"
+          >
+            <svg
+              class="stroke-theme_black dark:stroke-theme_black_dark"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-shopping-cart"
+            >
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              ></path>
+            </svg>
+          </li>
+
+          <!-- Dark Mode  - Moon -->
+          <li
+            id="darkMode"
+            class="block dark:hidden cursor-pointer border-1.4 border-theme_green rounded-full p-2 bg-theme_green transition hover:scale-105 md:border-theme_gray md:bg-theme_white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-moon"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </li>
+
+          <!-- Dark Mode  - Sun -->
+
+          <li
+            id="lightMode"
+            class="hidden dark:block cursor-pointer border-1.4 border-theme_green rounded-full p-2 bg-theme_green transition hover:scale-105 md:border-theme_gray md:bg-theme_white_dark md:text-theme_black_dark"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-sun"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </li>
+
+          <!-- Hamburger -->
+          <li
+            id="hamburger"
+            class="hidden md:block cursor-pointer border-1.4 border-theme_green rounded-full p-2 bg-theme_green transition hover:scale-105"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-menu"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ! Hero -->
+    <header
+      class="flex justify-between items-center site_padding py-12 space-x-4 lg:flex-col lg:space-y-12 lg:space-x-0"
+    >
+      <div class="space-y-6 xl:flex-1 lg:flex lg:flex-col lg:items-center">
+        <h1 class="title">
+          Furnish Your Home <br class="lg:hidden" />
+          with Style
+        </h1>
+        <h2
+          class="text-theme_gray dark:text-theme_gray_dark xl:w-3/5 lg:w-4/5 md:w-auto lg:text-center"
+        >
+          Explore curated stylish furniture at Home Haven. Find cozy sofas,
+          <br class="xl:hidden" />
+          elegant dining sets, and more to elevate your home decor.
+        </h2>
+
+        <!-- Buttons -->
+        <div class="flex items-center space-x-6 font-medium text-theme_black">
+          <button class="btn">
+            <a>Shop now</a>
+          </button>
+          <button
+            class="underline underline-offset-4 text-theme_black dark:text-theme_black_dark transition hover:scale-105"
+          >
+            <a href="#collections"> Explore</a>
+          </button>
+        </div>
+      </div>
+
+      <!-- Image div -->
+      <div class="relative w-2/5 xl:flex-1 lg:w-3/5 md:w-4/5 sm:w-auto">
+        <img
+          class="rounded-2xl dark:brightness-90"
+          src="assets/images/hero.webp"
+          alt="hero"
+        />
+        <div
+          class="absolute h-full w-full top-0 bg-gradient-to-b from-50% from-transparent to-stone-800 rounded-2xl"
+        >
+          <div
+            class="absolute bottom-8 sm:bottom-4 left-8 sm:left-4 text-white space-y-2 sm:space-y-1"
+          >
+            <p class="text-3xl sm:text-xl">Book table</p>
+            <p class="font-light sm:text-sm">Experience the ultimate</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <span id="collections"></span>
+    <!-- ! Collections -->
+    <section class="site_padding py-20">
+      <div class="flex justify-between items-center lg:flex-col lg:space-y-4">
+        <h2 class="title flex-[.6]">Discover Our Exclusive Collections</h2>
+        <p
+          class="text-theme_gray dark:text-theme_gray_dark lg:text-center flex-[.4]"
+        >
+          Explore our handpicked collections of exquisite furniture, curated to
+          suit every style and preference.
+        </p>
+      </div>
+      <ul class="flex gap-4 py-8 lg:gap-3 lg:flex-wrap lg:justify-center">
+        <li class="bg-theme_green px-8 py-3 rounded-full cursor-pointer">
+          Dinning
+        </li>
+        <li
+          class="bg-theme_light_gray text-theme_black dark:bg-theme_light_gray_dark dark:text-theme_black_dark px-8 py-3 rounded-full cursor-pointer"
+        >
+          Stool
+        </li>
+        <li
+          class="bg-theme_light_gray text-theme_black dark:bg-theme_light_gray_dark dark:text-theme_black_dark px-8 py-3 rounded-full cursor-pointer"
+        >
+          Desk
+        </li>
+        <li
+          class="bg-theme_light_gray text-theme_black dark:bg-theme_light_gray_dark dark:text-theme_black_dark px-8 py-3 rounded-full cursor-pointer"
+        >
+          Chest
+        </li>
+        <li
+          class="bg-theme_light_gray text-theme_black dark:bg-theme_light_gray_dark dark:text-theme_black_dark px-8 py-3 rounded-full cursor-pointer"
+        >
+          Chair
+        </li>
+      </ul>
+
+      <!-- ! Image div -->
+      <div
+        class="flex flex-wrap justify-between py-6 lg:justify-center lg:gap-6"
+      >
+        <!-- Card -->
+        <div
+          class="flex flex-col justify-center items-center w-56 sm:w-auto space-y-4 aspect-square"
+        >
+          <div
+            class="relative py-8 bg-theme_light_gray dark:bg-theme_light_gray_dark"
+          >
+            <button
+              class="text-xs bg-white dark:bg-stone-800 dark:text-theme_black_dark absolute right-2 top-2 rounded-full px-3 py-1"
+            >
+              <a>Save</a>
+            </button>
+            <img
+              class=""
+              width="100% "
+              src="assets/images/chair1.webp"
+              alt="Wooden Chair"
+            />
+          </div>
+          <p class="font-medium text-theme_black dark:text-theme_black_dark">
+            Wooden Chair
+          </p>
+        </div>
+        <!-- Card -->
+        <div
+          class="flex flex-col justify-center items-center w-56 sm:w-auto space-y-4 aspect-square"
+        >
+          <div
+            class="relative py-8 bg-theme_light_gray dark:bg-theme_light_gray_dark"
+          >
+            <button
+              class="text-xs bg-white dark:bg-stone-800 dark:text-theme_black_dark absolute right-2 top-2 rounded-full px-3 py-1"
+            >
+              <a>Save</a>
+            </button>
+            <img
+              class=""
+              width="100% "
+              src="assets/images/chair2.webp"
+              alt="Lounge Chair"
+            />
+          </div>
+          <p class="font-medium text-theme_black dark:text-theme_black_dark">
+            Lounge Chair
+          </p>
+        </div>
+        <!-- Card -->
+        <div
+          class="flex flex-col justify-center items-center w-56 sm:w-auto space-y-4 aspect-square"
+        >
+          <div
+            class="relative py-8 bg-theme_light_gray dark:bg-theme_light_gray_dark"
+          >
+            <button
+              class="text-xs bg-white dark:bg-stone-800 dark:text-theme_black_dark absolute right-2 top-2 rounded-full px-3 py-1"
+            >
+              <a>Save</a>
+            </button>
+            <img
+              class=""
+              width="100% "
+              src="assets/images/chair3.webp"
+              alt="Dining Chair"
+            />
+          </div>
+          <p class="font-medium text-theme_black dark:text-theme_black_dark">
+            Dining Chair
+          </p>
+        </div>
+        <!-- Card -->
+        <div
+          class="flex flex-col justify-center items-center w-56 sm:w-auto space-y-4 aspect-square"
+        >
+          <div
+            class="relative py-8 bg-theme_light_gray dark:bg-theme_light_gray_dark"
+          >
+            <button
+              class="text-xs bg-white dark:bg-stone-800 dark:text-theme_black_dark absolute right-2 top-2 rounded-full px-3 py-1"
+            >
+              <a>Save</a>
+            </button>
+            <img
+              class=""
+              width="100% "
+              src="assets/images/chair4.webp"
+              alt="Accent Chair"
+            />
+          </div>
+          <p class="font-medium text-theme_black dark:text-theme_black_dark">
+            Accent Chair
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! Hero 2 -->
+    <section
+      class="flex justify-between items-center site_padding py-12 flex-row-reverse lg:flex-col lg:space-y-12 sm:pt-0"
+    >
+      <div class="space-y-6 text-right flex-[.7]">
+        <h2 class="title">Discover a New <br />Furniture Experience</h2>
+        <p class="text-theme_gray dark:text-theme_gray_dark lg:text-center">
+          Immerse Yourself in Comfort and Style with Our<br />
+          Range of Luxurious Furniture and Cozy Accents
+        </p>
+      </div>
+      <!-- ! Image div -->
+      <div
+        class="w-2/5 relative lg:w-3/5 md:w-4/5 md:overflow-hidden sm:w-auto flex-[.4]"
+      >
+        <div
+          class="bg-theme_light_green dark:bg-theme_light_green_dark py-20 rounded-3xl"
+        >
+          <img
+            class="relative -right-1/4"
+            src="assets/images/book_shelf.webp"
+            alt="book shelf"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ! Hero 3 -->
+    <div
+      class="pl-40 bg-theme_light_gray dark:bg-theme_light_gray_dark lg:pt-12 lg:pl-0"
+    >
+      <section
+        class="flex justify-between items-center lg:flex-col lg:space-y-12"
+      >
+        <div class="space-y-6 lg:px-24 md:px-16 sm:px-8">
+          <h2 class="title">Where Minimalism <br />Meets Functionality</h2>
+          <p class="text-theme_gray dark:text-theme_gray_dark lg:text-center">
+            "Discover the Fusion of Minimalism and Functionality
+            <br class="md:hidden" />
+            in Our Relaxing Spa-Inspired Designs."
+          </p>
+          <div
+            class="flex items-center space-x-6 font-medium text-theme_black lg:justify-center"
+          >
+            <button class="btn">
+              <a>Shop now</a>
+            </button>
+          </div>
+        </div>
+        <!-- Image div -->
+        <div class="w-[45%] lg:w-full relative">
+          <img
+            class="dark:brightness-90"
+            src="assets/images/hero2.webp"
+            alt="hero"
+          />
+        </div>
+      </section>
+    </div>
+
+    <span id="projects"></span>
+    <!-- ! Projects -->
+    <section class="site_padding py-12 sm:py-20">
+      <div>
+        <h2 class="title text-center leading-normal">
+          Passionately Crafted <br />
+          Interiors that Inspire
+        </h2>
+      </div>
+      <!-- ! Image div -->
+      <div class="flex py-12 space-x-12 lg:flex-col lg:space-x-0 lg:space-y-6">
+        <div
+          class="flex flex-col justify-between flex-1 space-y-12 lg:space-y-6 lg:items-center"
+        >
+          <div class="relative lg:w-3/5 md:w-4/5 sm:w-auto">
+            <img
+              class="rounded-2xl"
+              src="assets/images/room1.webp"
+              alt="room"
+            />
+            <div
+              class="absolute h-full w-full top-0 bg-gradient-to-b from-65% from-transparent to-stone-600 rounded-2xl"
+            >
+              <div
+                class="absolute bottom-8 sm:bottom-4 left-8 sm:left-4 text-white space-y-2 sm:space-y-1"
+              >
+                <p class="text-3xl sm:text-xl">Book table</p>
+                <p class="font-light sm:text-sm">Experience the ultimate</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative lg:w-3/5 md:w-4/5 sm:w-auto">
+            <img
+              class="rounded-2xl"
+              src="assets/images/room2.webp"
+              alt="room"
+            />
+            <div
+              class="absolute h-full w-full top-0 bg-gradient-to-b from-65% from-transparent to-stone-600 rounded-2xl"
+            >
+              <div
+                class="absolute bottom-8 sm:bottom-4 left-8 sm:left-4 text-white space-y-2 sm:space-y-1"
+              >
+                <p class="text-3xl sm:text-xl">Book table</p>
+                <p class="font-light sm:text-sm">Experience the ultimate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1">
+          <div class="relative h-full lg:w-3/5 md:w-4/5 sm:w-auto lg:mx-auto">
+            <img
+              class="rounded-2xl h-full"
+              src="assets/images/room3.webp"
+              alt="room"
+            />
+            <div
+              class="absolute h-full w-full top-0 bg-gradient-to-b from-65% from-transparent to-stone-600 rounded-2xl"
+            >
+              <div
+                class="absolute bottom-8 sm:bottom-4 left-8 sm:left-4 text-white space-y-2 sm:space-y-1"
+              >
+                <p class="text-3xl sm:text-xl">Book table</p>
+                <p class="font-light sm:text-sm">Experience the ultimate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! Hero 4 -->
+    <section
+      class="flex flex-row-reverse text-right justify-between items-center site_padding py-12 lg:flex-col lg:text-center sm:py-0"
+    >
+      <div class="space-y-6">
+        <h2 class="title">Unlock a New<br class="md:hidden" />Experience</h2>
+        <p class="text-theme_gray dark:text-theme_gray_dark">
+          "Unlock a New Experience: Indulge in Comfort and Style with
+          <br class="md:hidden" />
+          Our Plush Furniture and Cozy Accents
+        </p>
+        <div
+          class="flex justify-end space-x-6 font-medium text-theme_black lg:justify-center"
+        >
+          <button class="btn">
+            <a>Shop now</a>
+          </button>
+        </div>
+      </div>
+      <!-- Image div -->
+      <div class="w-2/5 lg:w-3/5 md:w-4/5 sm:w-auto relative">
+        <img
+          class="rounded-2xl brightness-90"
+          src="assets/images/hero4.webp"
+          alt="hero"
+        />
+      </div>
+    </section>
+
+    <!-- ! Footer -->
+    <footer class="site_padding pb-6">
+      <div
+        class="flex justify-between pt-6 mt-6 border-t border-theme_gray md:flex-col md:items-center md:space-y-6"
+      >
+        <ul
+          class="flex items-center space-x-12 text-theme_gray dark:text-theme_gray_dark text-xs sm:flex-col sm:space-x-0 sm:space-y-4"
+        >
+          <li>&copy; 2024 Furniq. All Rights Reserved.</li>
+        </ul>
+        <!-- Social Media -->
+        <ul
+          class="flex items-center space-x-4 text-theme_gray dark:text-theme_gray_dark text-xs"
+        >
+          <!-- Instagram -->
+          <li
+            class="bg-gray-200 dark:bg-theme_light_green_dark p-3 rounded-full text-theme_dark_green dark:text-theme_white_dark cursor-pointer transition hover:text-theme_black hover:bg-theme_green dark:hover:bg-theme_green"
+          >
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-instagram"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </li>
+
+          <!-- Facebook -->
+
+          <li
+            class="bg-gray-200 dark:bg-theme_light_green_dark p-3 rounded-full text-theme_dark_green dark:text-theme_white_dark cursor-pointer transition hover:text-theme_black hover:bg-theme_green dark:hover:bg-theme_green"
+          >
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-facebook"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+
+          <!-- Twitter -->
+
+          <li
+            class="bg-gray-200 dark:bg-theme_light_green_dark p-3 rounded-full text-theme_dark_green dark:text-theme_white_dark cursor-pointer transition hover:text-theme_black hover:bg-theme_green dark:hover:bg-theme_green"
+          >
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-twitter"
+              >
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

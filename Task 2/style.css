@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.btn {
+  @apply bg-theme_black py-5 px-10 text-sm font-bold text-white rounded-full mt-12 transition-all hover:bg-white hover:text-theme_black hover:shadow-lg dark:bg-theme_black_dark dark:text-theme_white_dark dark:hover:bg-theme_white_dark dark:hover:text-theme_black_dark md:flex md:justify-center md:w-fit md:mx-auto;
+}
+
+.card {
+  @apply flex-none block w-3/5 min-w-[20rem] space-y-4 sm:min-w-[80vw];
+}
+
+.nav_links_ham {
+  @apply !block text-base space-y-4 my-8;
+}
